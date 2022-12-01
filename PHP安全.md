@@ -48,11 +48,15 @@
   - 反序列化逃逸
     - 后面部分逃逸
     - 前面部分逃逸
-  - __wakeup 绕过1 CVE-2016-xxxx
-  - __wakeup 绕过2 ，laravel 实例
+  - __wakeup 绕过，CVE-2016-7124，通过更改参数个数
+  - __wakeup 绕过，通过 引用 R 来实现
   - gmp 反序列化
   - phar 反序列化
   - GC 绕过  exception 限制
+  - fast destruct
+  - 对象遍历
+  - 间接加载目标类
+  - 
   
 - 文件上传
   - windows 保存文件会抹去最后的点绕过
@@ -72,9 +76,13 @@
   - smarty 模板注入
 - 文件包含
   - 本地包含
+    - session 包含
+    - 临时文件包含
+    - crash 包含
+    - pearcmd 包含
   - 远程包含
   - php://filter
-
+  
 - csrf
 - crlf
 - ldap 注入
@@ -93,8 +101,10 @@
 
 - file_exists / is_file 绕过 windows 才可以绕过
 - trim 去除两边的空白字符
-- is_numric
+- is_numeric
 - PCRE 回溯绕过
+- open_basedir 绕过
+- disabled_function 绕过
 - 
 
 

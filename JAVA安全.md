@@ -4,10 +4,14 @@
 
 - 反序列化
   - readobject
+  - CB 链
+  - CC1 链
+  - 
 - el 
 - spel
 - jndi
 - ssti
+- 目录穿越
 - 
 
 
