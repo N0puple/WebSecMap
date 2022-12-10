@@ -112,9 +112,10 @@
 ## 框架漏洞
 
 - ThinkPHP
-  - ThinkPHP5.0.24 RCE
-  - 
-
+  - ThinkPHP 5.0.24 RCE
+  - ThinkPHP 5.1.41 文件上传 getshell CVE-2022-44289
+  - ThinkPHP 6.0.13 文件包含 RCE
+  
 - Laravel
   - Laravel Debug RCE
 

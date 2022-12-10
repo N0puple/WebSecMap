@@ -1,17 +1,28 @@
 # JAVA 知识点
 
-## 基础漏洞
+## 基础使用与漏洞
 
 - 反序列化
+  - ysuserial 工具学习
   - readobject
-  - CB 链
-  - CC1 链
+  - common-beanutils1 链
+  - common-beanutils1 没有 common-connections 的情况
+  - common-connections1 链
   - 
 - el 
 - spel
 - jndi
 - ssti
 - 目录穿越
+- 不安全的反射
+- 动态代理
+- javassist
+- cglib
+- RCE
+  - java.lang.Runtime.getRuntime()
+  - java.lang.ProcessBuilder
+
+- rmi
 - 
 
 
@@ -47,8 +58,9 @@
 - SpringBoot
 - SpringMVC
 - SpringSecurity
+- SpringCloud
 - Struts2
-- Shiro
+- Apache Shiro
   - 未授权绕过 （regexp 等绕过）
 
 - solr
