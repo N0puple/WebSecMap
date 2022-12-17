@@ -22,14 +22,12 @@
     - 可以 bool，通过 regexp / like 实现
 
     - 只能时间盲注，笛卡尔积实现
-
 - XSS
 - XXE
   - 通过上传 Word 造成 XXE
   - 盲 XXE
   - XXE 执行命令
   - 
-
 - SSRF
   - 盲 SSRF
   - SSRF
@@ -37,13 +35,11 @@
 - 代码执行
   - eval
   - assert
-
 - 命令执行
   - system
   - passthru
   - exec
   - shell_escapeargs xxx 绕过
-  
 - 反序列化
   - 反序列化逃逸
     - 后面部分逃逸
@@ -57,18 +53,15 @@
   - 对象遍历
   - 间接加载目标类
   - 
-  
 - 文件上传
   - windows 保存文件会抹去最后的点绕过
   - .htaccess 绕过黑名单
   - .user.ini 绕过黑名单
   - 
-
 - 变量覆盖
   - parse_str
   - extract
   - 
-
 - 目录穿越
 - 文件读取/写入
 - 模板注入 SSTI
@@ -76,13 +69,16 @@
   - smarty 模板注入
 - 文件包含
   - 本地包含
-    - session 包含
-    - 临时文件包含
-    - crash 包含
-    - pearcmd 包含
-  - 远程包含
+    - 日志文件包含
+    - session 包含（需要开启 session.upload_progress.enable）
+    - 通过上传文件产生的临时文件包含（文件名未知，因此需要从 phpinfo 中读取或者是利用windows通配符获取，然后利用条件竞争访问）
+    - crash 后导致临时文件驻留从而包含
+    - pearcmd 包含（可以bypass限制php后缀，需要存在 pearcmd）
+    - 利用伪协议包含（可以bypass限制php后缀）
+    - nginx下post 大 body 产生临时文件进行包含
+  - 远程包含（默认不开启 allow_url_include）
   - php://filter
-  
+  - 使用 phar文件 bypass 后缀限制
 - csrf
 - crlf
 - ldap 注入
@@ -105,6 +101,7 @@
 - PCRE 回溯绕过
 - open_basedir 绕过
 - disabled_function 绕过
+- 死亡 exit 绕过
 - 
 
 
